@@ -7,7 +7,7 @@ let sender;
 if (url.searchParams.get('by') != null) {
   sender = url.searchParams.get('by');
 } else {
-  sender = "Adam";
+  sender = "Mas Fajar";
 }
 
 let footer = document.getElementById("credit");
@@ -15,20 +15,20 @@ footer.innerHTML = sender;
 footer.href = "https://www.instagram.com/adamukti/";
 
 document.querySelector(".tombol").addEventListener('click', function () {
-  Swal.fire("Hallo Sayangku", "Aku ada pertanyaan nih buat kamu?", "question").then(function () {
+  Swal.fire("Hallo Uni", "Aku ada pertanyaan nih buat kamu?", "question").then(function () {
     Swal.fire("Jawab yang jujur ya!").then(function () {
       Swal.fire("Awas aja kalo boong!!", "", "error").then(function () {
 
         const {
           value: name
         } = Swal.fire({
-          title: 'Masukin nama kamu dulu',
+          title: 'Masukin nama panggilan kesukaan kamu dulu',
           input: 'text',
           inputLabel: '',
           showCancelButton: true,
           inputValidator: (value) => {
             if (!value) {
-              return 'Isi dulu dong beb'
+              return 'Isi dulu dong hehe'
             } else {
               nama = value;
             }
@@ -68,12 +68,12 @@ document.querySelector(".tombol").addEventListener('click', function () {
                       /* Read more about isConfirmed, isDenied below */
                       if (result.isConfirmed) {
                         Swal.fire(`Huhu iya ${sender} juga kangen ${nama} :((`).then(function () {
-                          Swal.fire('Terakhir deh sayang').then(function () {
+                          Swal.fire('Terakhir deh uni').then(function () {
                             Swal.fire('Coba klik ikon hati di paling bawah dong')
                           })
                         })
                       } else if (result.isDenied) {
-                        Swal.fire('Jahat banget emang ga kangen sama pacar sendiri', '', 'error').then(function () {
+                        Swal.fire('Jahat banget emang ga kangen sama aku', '', 'error').then(function () {
                           Swal.fire('Yaudah deh bye!')
                         })
                       }
@@ -82,7 +82,7 @@ document.querySelector(".tombol").addEventListener('click', function () {
                 })
               })
             } else if (result.isDenied) {
-              Swal.fire(`Yakin ga suka sama ${sender}?`, '', 'error').then(function () {
+              Swal.fire(`Yakin uni ga suka sama ${sender}?`, '', 'error').then(function () {
                 Swal.fire('Yaudah deh bye!')
               })
             }
